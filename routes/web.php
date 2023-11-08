@@ -26,14 +26,16 @@ Route::controller(AuthController::class)->group(function () {
 	Route::get('logout', 'logout')->middleware('auth')->name('logout');
 });
 
-Route::get('/', function () {
-	return view('welcome');
-});
+
 
 Route::middleware('auth')->group(function () {
 	Route::get('dashboard', function () {
 		return view('dashboard');
 	})->name('dashboard');
+
+	Route::get('/', function () {
+		return view('konz');
+	});
 
 	Route::controller(BarangController::class)->prefix('barang')->group(function () {
 		Route::get('', 'index')->name('barang');
