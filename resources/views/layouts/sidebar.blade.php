@@ -1,4 +1,4 @@
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar"> // phpcs:ignore Internal.NoCodeFound
 
   <!-- Sidebar - Brand -->
   <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
@@ -24,10 +24,10 @@
       <span>Barang</span></a>
   </li>
 
-	@if (auth()->user()->level == 'Admin')
+	@if (auth()->user()->level == 'Admin') 
   <li class="nav-item">
     <a class="nav-link" href="{{ route('kategori') }}">
-      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <i class="fas fa-fw fa-folder"></i>
       <span>Kategori</span></a>
   </li>
 	@endif
