@@ -39,7 +39,7 @@ class BarangController extends Controller
 
 	public function edit($id)
 	{
-		$barang = Barang::find($id)->first();
+		$barang = Barang::find($id);
 		$kategori = Kategori::get();
 
 		return view('barang.form', ['barang' => $barang, 'kategori' => $kategori]);
